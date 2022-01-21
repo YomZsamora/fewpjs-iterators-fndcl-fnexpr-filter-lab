@@ -1,4 +1,9 @@
 // Returns all drivers that match the passed in name even if case does not match but letters do
-let findMatching = (listOfDrivers, driverName) => {
-   return listOfDrivers.filter( driver => {  return driver.toLowerCase() === driverName.toLowerCase() });
+let findMatching = (listOfDrivers, searchedDriver) => {
+   return listOfDrivers.filter( driverName => {  return driverName.toLowerCase() === searchedDriver.toLowerCase() });
+}
+
+// Returns a driver if beginning provided charaters match with passed matchingLetters
+let fuzzyMatch = (listOfDrivers, matchingLetters) => {
+   return listOfDrivers.filter( driverName => {  return driverName.substring(0, 2) === matchingLetters });
 }
