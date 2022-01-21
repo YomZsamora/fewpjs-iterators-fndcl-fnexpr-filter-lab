@@ -8,8 +8,7 @@ let fuzzyMatch = (listOfDrivers, matchingLetters) => {
    return listOfDrivers.filter( driverName => {  return driverName.substring(0, 2) === matchingLetters });
 }
 
+// Accesses a data structure to check if name matches.
 let matchName = (listOfDrivers, searchedDriver) => {
-   return listOfDrivers.filter( driverName => {
-      return driverName.name === searchedDriver
-   })
+   return listOfDrivers.filter( driverName => { return driverName.name === searchedDriver })
 }
